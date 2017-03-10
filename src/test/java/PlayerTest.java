@@ -16,11 +16,6 @@ public class PlayerTest {
 	}	
 	
 	@Test
-	public void testGetName(){
-		assertEquals("Danny Rose", testP.getName());
-	}
-	
-	@Test
 	public void testGetTeamName(){
 		assertEquals("Tottenham Hotspur", testP.getTeamName());
 	}
