@@ -15,11 +15,6 @@ public class PlayerTest {
 		assertEquals(3, testP.getNumber());
 	}	
 	
-	@Test(expected = IllegalArgumentException.class)
-	public void testSetNegativeNumber(){
-		testP.setNumber(-3);
-	}
-	
 	@Test
 	public void testGetName(){
 		assertEquals("Danny Rose", testP.getName());
@@ -33,11 +28,6 @@ public class PlayerTest {
 	@Test
 	public void testGetAge(){
 		assertEquals(24, testP.getAge());
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testAgeToYoung(){
-		testP.setAge(14);
 	}
 	
 	@Test
