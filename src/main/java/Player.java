@@ -1,7 +1,5 @@
-import java.io.Serializable;
-
-public class Player implements Serializable{
-	protected int number = 0;
+public class Player{
+	protected int jerseyNumber = 0;
 	protected String name = "";
 	protected String teamName = "";
 	protected int age = 0;
@@ -9,11 +7,11 @@ public class Player implements Serializable{
 
 	protected Player() {
 		name = teamName = position = "";
-		age = number = 0;
+		age = jerseyNumber = 0;
 	}
 
-	protected Player(int number, String name, String teamName, int age, String position) {
-		this.number = number;
+	protected Player(int jerseyNumber, String name, String teamName, int age, String position) {
+		this.jerseyNumber = jerseyNumber;
 		this.name = name;
 		this.teamName = teamName;
 		this.age = age;
@@ -33,33 +31,33 @@ public class Player implements Serializable{
 		return position.matches("\bGoalkeeper\b || \bDefender\b || \bMidfielder\b || \bForward\b");
 	}
 	
-	protected void setNumber(int jerseyNumber) {
+	protected void setJerseyNumber(int jerseyNumber) {
 		if(jerseyNumber < 0){
 			throw new IllegalArgumentException("Number must be a positive number.");
 		}
 		else{
-			this.number = jerseyNumber;
+			this.jerseyNumber = jerseyNumber;
 		}
 	}
 
-	protected void setAge(int setAgeTo) {
+	protected void setAge(int age) {
 		if(age < 16 || age > 50){
 			throw new IllegalArgumentException("Age must be 16 or above or 50 or below ");
 		}
-		age = setAgeTo;
+		this.age = age;
 	}
 	
-	protected void setName(String setNameTo) {
+	protected void setName(String name) {
 		if(validateName(name) == true){
-			name = setNameTo;
+			this.name = name;
 		}
 		else
 			throw new IllegalArgumentException("Name can only contain letters, apostrophe or hyphen");
 	}
 	
-	protected void setTeamName(String setTeamNameTo) {
+	protected void setTeamName(String teamName) {
 		if(validateTeamName(teamName) == true){
-			teamName = setTeamNameTo;
+			this.teamName = teamName;
 		}
 		else
 			throw new IllegalArgumentException("Team Name can contain only numbers, letters or full stop");
@@ -73,8 +71,8 @@ public class Player implements Serializable{
 			throw new IllegalArgumentException("Position must either be Goalkeeper, Defender, Midfielder or Forward");
 	}
 	
-	protected int getNumber() {
-		return number;
+	protected int getJerseyNumber() {
+		return jerseyNumber;
 	}
 
 	protected String getName() {
@@ -94,7 +92,7 @@ public class Player implements Serializable{
 	}
 
 	public String toString() {
-		return number + "\t\tName: " + name + ".\t\tPlays For: " + teamName + ".\t\tAge: " + age + ".\t\tPosition: "
+		return "Jersey Number: " + jerseyNumber + "\t\tName: " + name + ".\t\tPlays For: " + teamName + ".\t\tAge: " + age + ".\t\tPosition: "
 				+ position + ".";
 	}
 }
