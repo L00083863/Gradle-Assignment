@@ -13,7 +13,12 @@ public class PlayerTest {
 	@Test
 	public void testGetNumber(){
 		assertEquals(3, testP.getNumber());
-	}	
+	}
+	
+	@Test
+	public void testGetName(){
+		assertEquals("Danny Rose", testP.getName());
+	}
 	
 	@Test
 	public void testGetTeamName(){
