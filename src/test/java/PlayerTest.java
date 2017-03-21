@@ -3,34 +3,48 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class PlayerTest {
-	Player testP = new Player("Danny Rose", 26, 3, "Defender", 20000000);
+	Player testP = new Player("Danny", "Rose", 26, 3, "Defender", 20000000);
 	
 	//Test to set and get illegal and legal names
 	@Test
-	public void testGetName(){
-	assertEquals("Danny Rose", testP.getName());
-	}
-		
-	@Test
-	public void testSetApostropheName(){
-		testP.setName("John O'Shea");
+	public void testGetFirstName(){
+		assertEquals("Danny", testP.getFirstName());
 	}
 	
 	@Test
-	public void testSetHyphenedName(){
-		testP.setName("Pierre-Emerick Aubameyang");
+	public void testSetHyphenedFirstName(){
+		testP.setFirstName("Pierre-Emerick");
 	}
 		
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetInvalidName(){
-		testP.setName("Harry K1ne");
+	public void testSetInvalidFirstName(){
+		testP.setFirstName("H4nry");
 	}
 		
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetInvalidName2(){
-		testP.setName("Edgar D#vids");
+	public void testSetInvalidFirstName2(){
+		testP.setFirstName("Pierre.Emerick");
 	}
 	
+	@Test
+	public void testGetSurname(){
+		assertEquals("Rose", testP.getLastName());
+	}
+	
+	@Test
+	public void testGetHyphenedSurname(){
+		testP.setLastName("Robson-Kanu");
+	}
+	
+	@Test
+	public void testGetApostropheSurname(){
+		testP.setLastName("O'Shea");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetInvalidSurname(){
+		testP.setLastName("O+Shea");
+	}
 	//Tests to set and get invalid and valid age
 	@Test
 	public void testGetAge(){
@@ -86,7 +100,7 @@ public class PlayerTest {
 	}*/
 	
 	//Tests to set and get valid and invalid positions
-	@Test
+	/*@Test
 	public void testGetPosition(){
 		assertEquals("Defender", testP.getPosition());
 	}
@@ -94,7 +108,7 @@ public class PlayerTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetIllegalPosition(){
 		testP.setPosition("Striker");
-	}
+	}*/
 	
 	@Test
 	public void testGetValue(){
