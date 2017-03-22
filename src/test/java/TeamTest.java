@@ -50,7 +50,7 @@ public class TeamTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetInvalidTeamName2(){
 		team1.setTeamName("Glasgow'Celtic");
-		assertThat(team1.getTeamName(), is(equalTo("Glasgow€Celtic")));
+		assertThat(team1.getTeamName(), is(equalTo("Glasgow'Celtic")));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
