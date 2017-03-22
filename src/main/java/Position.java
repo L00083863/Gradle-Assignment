@@ -1,4 +1,4 @@
-public enum Position {
+public enum Position{
 	Goalkeeper ("GK"),
 	Defender ("DF"),
 	Midfielder ("MD"),

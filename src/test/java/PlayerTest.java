@@ -32,17 +32,17 @@ public class PlayerTest {
 	}
 	
 	@Test
-	public void testGetHyphenedSurname(){
+	public void testSetHyphenedSurname(){
 		testP.setLastName("Robson-Kanu");
 	}
 	
 	@Test
-	public void testGetApostropheSurname(){
+	public void testSetApostropheSurname(){
 		testP.setLastName("O'Shea");
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void testGetInvalidSurname(){
+	public void testSetInvalidSurname(){
 		testP.setLastName("O+Shea");
 	}
 	//Tests to set and get invalid and valid age
@@ -69,40 +69,14 @@ public class PlayerTest {
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void testGetInvalidJerseyNumber(){
+	public void testSetInvalidJerseyNumber(){
 		testP.setJerseyNumber(-3);
 	}
-	
-	/*Tests to set and get valid and invalid team names
-	@Test
-	public void testGetTeamName(){
-		assertEquals("Tottenham Hotspur", testP.getTeamName());
-	}
-	
-	@Test
-	public void testSetNumericalTeamName(){
-		testP.setTeamName("FC Schalke 04");
-	}
-	
-	@Test
-	public void testSetNumericalTeamName2(){
-		testP.setTeamName("1860 Munich");
-	}
-	
-	@Test
-	public void testSetTeamNameWithFullStop(){
-		testP.setTeamName("Hull City F.C");
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testSetIllegalTeamName(){
-		testP.setTeamName("Wimbledon/MkDons");
-	}*/
 	
 	//Tests to set and get valid and invalid positions
 	/*@Test
 	public void testGetPosition(){
-		assertEquals("Defender", testP.getPosition());
+		assertEquals("Defender", testP.getPlayerPosition());
 	}
 	
 	@Test(expected = IllegalArgumentException.class)

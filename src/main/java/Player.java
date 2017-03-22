@@ -31,9 +31,9 @@ public class Player{
 		return teamName.matches("[a-zA-Z0-9]+([ .][a-zA-Z0-9]+)*");
 	}*/
 	
-	public static boolean validatePosition(String position){
+	/*public static boolean validatePosition(String position){
 		return position.matches("\bGoalkeeper\b || \bDefender\b || \bMidfielder\b || \bForward\b");
-	}
+	}*/
 	
 	protected void setFirstName(String fname) {
 		if(validateFirstName(fname) == true){
