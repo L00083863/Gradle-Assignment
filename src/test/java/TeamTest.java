@@ -58,4 +58,28 @@ public class TeamTest {
 		team1.setTeamName("#Spurs");
 		assertThat(team1.getTeamName(), endsWith("urs"));
 	}
+	
+	@Test
+	public void testSetManagerName(){
+		team1.setManagerName("Sam Allerdyce");
+		assertThat(team1.getManagerName(), is(equalTo("Sam Allerdyce")));
+	}
+	
+	@Test
+	public void testSetManagerHyphenedName(){
+		team1.setManagerName("Jean-Yves Chay");
+		assertThat(team1.getManagerName(), is(equalTo("Jean-Yves Chay")));
+	}
+	
+	@Test
+	public void testSetManagerApostropheName(){
+		team1.setManagerName("Michel Preud'homme");
+		assertThat(team1.getManagerName(), is(equalTo("Michel Preud'homme")));
+	}
+	
+	@Test
+	public void testSetForeignManagerNames(){
+		team1.setManagerName("José Mourinho");
+		assertThat(team1.getManagerName(), is(equalTo("José Mourinho")));
+	}
 }

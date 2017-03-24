@@ -22,7 +22,7 @@ public class Team {
 	}
 	
 	public static boolean validateManagerName(String managerName){
-		return managerName.matches("[a-zA-Z]+([ -'][\\p{L}][a-zA-Z]+)*");
+		return managerName.matches("[a-zA-Záéíóú]+([ '-][a-zA-Z]+)*");
 	}
 	
 	protected void setTeamName(String teamName){
