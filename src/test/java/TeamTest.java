@@ -2,11 +2,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.endsWith;
+
 
 
 public class TeamTest {
-	Team team1 = new Team("Tottenham Hotspur", "White Hart Lane", "Mauricio Pochettino");
+	Team team1 = new Team("Tottenham Hotspur", "White Hart Lane", "Mauricio",  "Pochettino");
 	
 	@Test
 	public void testGetTeamName() {
@@ -19,10 +23,15 @@ public class TeamTest {
 	}
 	
 	@Test
-	public void testGetTeamManagerName(){
-		assertEquals("Mauricio Pochettino", team1.getManagerName());
+	public void testGetTeamManagerFirstName(){
+		assertEquals("Mauricio", team1.getManagerFName());
 	}
-
+	
+	@Test
+	public void testGetTeamManagerLastName(){
+		assertEquals("Pochettino", team1.getManagerLName());
+	}
+	
 	@Test
 	public void testSetTeamName(){
 		team1.setTeamName("Wrexham");
@@ -59,8 +68,8 @@ public class TeamTest {
 		assertThat(team1.getTeamName(), endsWith("urs"));
 	}
 	
-	@Test
-	public void testSetManagerName(){
+	//@Test
+	/*public void testSetManagerName(){
 		team1.setManagerName("Sam Allerdyce");
 		assertThat(team1.getManagerName(), is(equalTo("Sam Allerdyce")));
 	}
@@ -78,8 +87,20 @@ public class TeamTest {
 	}
 	
 	@Test
-	public void testSetForeignManagerNames(){
+	public void testSetForeignManagerName(){
 		team1.setManagerName("José Mourinho");
 		assertThat(team1.getManagerName(), is(equalTo("José Mourinho")));
 	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetInvalidManagerName(){
+		team1.setManagerName("Jimmy-Floyd Hass;eback");
+		assertThat(team1.getManagerName(), is(equalTo("Jimmy-Floyd Hass;eback")));
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetInvalidManagerName2(){
+		team1.setManagerName("M4rtin O'Neill");
+		assertThat(team1.getManagerName(), is(equalTo("M4rtin O'Neill")));
+	}*/
 }
