@@ -50,7 +50,12 @@ public class PlayerTest{
 	public void testGetAge(){
 		assertEquals(26, testP.getAge());
 	}
-		
+	
+	@Test
+	public void testSetValidAge(){
+		testP.setAge(27);
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetAgeToYoung(){
 		testP.setAge(12);
@@ -60,6 +65,7 @@ public class PlayerTest{
 	public void testSetAgeToOld(){
 		testP.setAge(51);
 	}
+	
 	
 	//Tests to get/set jersey number
 	
