@@ -20,6 +20,7 @@ public class Player{
 		this.jerseyNumber = jerseyNumber;
 		this.value = value;
 	}
+
 	
 	public static boolean validateFirstName(String fname){
 		return fname.matches("[a-zA-Z]+([ -][a-zA-Z]+)*");

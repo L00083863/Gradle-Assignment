@@ -2,8 +2,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class PlayerTest {
-	Player testP = new Player("Danny", "Rose", 26, 3, "Defender", 20000000);
+public class PlayerTest{
+	Player testP = new Player("Danny", "Rose", 26, 3, Position.DEFENDER, 20000000);
 	
 	//Test to set and get illegal and legal names
 	@Test
