@@ -1,16 +1,26 @@
 public enum Position{
-	Goalkeeper ("GK"),
-	Defender ("DF"),
-	Midfielder ("MD"),
-	Forward ("FW");
+	GOALKEEPER("Goalkeeper"),
+	DEFENDER("Defender"),
+	MIDFIELD("Midfield"),
+	FORWARD("Forward");
 	
-	private String playerPosition;
+	private final String position;
 	
-	private Position(String playerPosition){
-		this.playerPosition = playerPosition;
+	private Position(final String position){
+		this.position = position;
 	}
 	
-	public String getPlayerPosition(){
-		return playerPosition;
+	@Override
+	public String toString(){
+		return position;
 	}
 }
+/*private String playerPosition;
+
+private Position(String playerPosition){
+	this.playerPosition = playerPosition;
+}
+
+public String getPlayerPosition(){
+	return playerPosition;
+}*/

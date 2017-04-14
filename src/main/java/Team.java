@@ -1,16 +1,18 @@
 public class Team {
 	protected String teamName;
 	protected String stadiumName;
-	protected String managerName;
+	protected String managerFName;
+	protected String managerLName;
 	
 	protected Team(){
-		teamName = stadiumName = managerName = "";
+		teamName = stadiumName = managerFName = managerLName;
 	}
 	
-	protected Team(String teamName, String stadiumName, String managerName){
+	protected Team(String teamName, String stadiumName, String managerFName, String managerLName){
 		this.teamName = teamName;
 		this.stadiumName = stadiumName;
-		this.managerName = managerName;
+		this.managerFName = managerFName;
+		this.managerLName = managerLName;
 	}
 	
 	public static boolean validateTeamName(String teamName){
@@ -21,8 +23,12 @@ public class Team {
 		return stadiumName.matches("[a-zA-Z0-9]+([ .-'][a-zA-Z0-9]+)*");
 	}
 	
-	public static boolean validateManagerName(String managerName){
-		return managerName.matches("[a-zA-Záéíóú]+([ '-][a-zA-Z]+)*");
+	public static boolean validateManagerFName(String managerFName){
+		return managerFName.matches("[a-zA-Záéíóú]+([ -][a-zA-Z]+)*");
+	}
+	
+	public static boolean validateManagerLName(String managerLName){
+		return managerLName.matches("[a-zA-Záéíóú]+([ '-][a-zA-Z]+)*");
 	}
 	
 	protected void setTeamName(String teamName){
@@ -41,14 +47,21 @@ public class Team {
 			throw new IllegalArgumentException("Staidum Name can contain letters, numbers, full stop, hypen or an apostrophe");
 	}
 	
-	protected void setManagerName(String managerName){
-		if(validateManagerName(managerName) == true){
-			this.managerName = managerName;
+	protected void setManagerFName(String managerFName){
+		if(validateManagerFName(managerFName) == true){
+			this.managerFName = managerFName;
 		}
 		else
-			throw new IllegalArgumentException("Manager name can contain letters from any language, a hyphen or an apostrophe");
+			throw new IllegalArgumentException("Manager first name can contain letters from any language or a hyphen");
 	}
-	
+
+	protected void setManagerLName(String managerLName){
+		if(validateManagerFName(managerLName) == true){
+			this.managerLName = managerLName;
+		}
+		else
+			throw new IllegalArgumentException("Manager first name can contain letters from any language, a hyphen or an apostrophe");
+	}
 	protected String getTeamName(){
 		return teamName;
 	}
@@ -57,11 +70,16 @@ public class Team {
 		return stadiumName;
 	}
 	
-	protected String getManagerName(){
-		return managerName;
+	protected String getManagerFName(){
+		return managerFName;
+	}
+	
+	protected String getManagerLName(){
+		return managerLName;
 	}
 	
 	public String toString(){
-		return "Team Name: " + teamName + "\t\tStadium Name: " + stadiumName + "\t\tManager Name: " +managerName;
+		return "Team Name: " + teamName + "\t\tStadium Name: " + stadiumName + 
+				"\t\tManager First Name: " +managerFName+ "\t\tManager Surname: "+managerLName;
 	}
 }

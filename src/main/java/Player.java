@@ -11,14 +11,16 @@ public class Player{
 		age = jerseyNumber = value = 0;
 	}
 
-	protected Player(String fname, String lname, int age, int jerseyNumber, String position, int value) {
+	protected Player(String fname, String lname, int age, int jerseyNumber, Position position, int value) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
+		this.position = position;
 		this.age = age;
 		this.jerseyNumber = jerseyNumber;
 		this.value = value;
 	}
+
 	
 	public static boolean validateFirstName(String fname){
 		return fname.matches("[a-zA-Z]+([ -][a-zA-Z]+)*");
