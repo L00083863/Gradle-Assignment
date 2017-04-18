@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PlayerTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2017-04-14T18:49:34" hostname="DESKTOP-0LR9QDO" time="0.018">
+  <properties/>
+  <testcase name="testSetApostropheSurname" classname="PlayerTest" time="0.002"/>
+  <testcase name="testGetValue" classname="PlayerTest" time="0.0"/>
+  <testcase name="testGetSurname" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetAgeToOld" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetInvalidSurname" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetInvalidJerseyNumber" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetInvalidFirstName" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetValueToHigh" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetAgeToYoung" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetValueToLow" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetHyphenedSurname" classname="PlayerTest" time="0.0"/>
+  <testcase name="testGetJerseyNumber" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetInvalidFirstName2" classname="PlayerTest" time="0.0"/>
+  <testcase name="testGetFirstName" classname="PlayerTest" time="0.0"/>
+  <testcase name="testGetAge" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetHyphenedFirstName" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetValue" classname="PlayerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
