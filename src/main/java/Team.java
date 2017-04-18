@@ -23,8 +23,8 @@ public class Team {
 		return stadiumName.matches("[a-zA-Z0-9]+([ .-'][a-zA-Z0-9]+)*");
 	}
 	
-	public static boolean validateManagerName(String managerFName){
-		return managerFName.matches("[a-zA-Záéíóú]+([ '-][a-zA-Z]+)*");
+	public static boolean validateManagerFName(String managerFName){
+		return managerFName.matches("[a-zA-Záéíóú]+([ -][a-zA-Z]+)*");
 	}
 	
 	public static boolean validateManagerLName(String managerLName){
@@ -48,15 +48,15 @@ public class Team {
 	}
 	
 	protected void setManagerFName(String managerFName){
-		if(validateManagerName(managerFName) == true){
+		if(validateManagerFName(managerFName) == true){
 			this.managerFName = managerFName;
 		}
 		else
-			throw new IllegalArgumentException("Manager first name can contain letters from any language, a hyphen or an apostrophe");
+			throw new IllegalArgumentException("Manager first name can contain letters from any language or a hyphen");
 	}
 
 	protected void setManagerLName(String managerLName){
-		if(validateManagerName(managerLName) == true){
+		if(validateManagerFName(managerLName) == true){
 			this.managerLName = managerLName;
 		}
 		else

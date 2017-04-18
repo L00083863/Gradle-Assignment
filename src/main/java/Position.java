@@ -1,7 +1,7 @@
 public enum Position{
 	GOALKEEPER("Goalkeeper"),
 	DEFENDER("Defender"),
-	MIDFIELD("Midfield"),
+	MIDFIELDER("Midfielder"),
 	FORWARD("Forward");
 	
 	private final String position;

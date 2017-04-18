@@ -3,11 +3,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.startsWith;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.endsWith;
-
-
+import static org.hamcrest.Matchers.is;
 
 public class TeamTest {
 	Team team1 = new Team("Tottenham Hotspur", "White Hart Lane", "Mauricio",  "Pochettino");
@@ -65,42 +64,43 @@ public class TeamTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetInvalidTeamName3(){
 		team1.setTeamName("#Spurs");
-		assertThat(team1.getTeamName(), endsWith("urs"));
-	}
-	
-	//@Test
-	/*public void testSetManagerName(){
-		team1.setManagerName("Sam Allerdyce");
-		assertThat(team1.getManagerName(), is(equalTo("Sam Allerdyce")));
+		assertThat(team1.getTeamName(), startsWith("#"));
 	}
 	
 	@Test
-	public void testSetManagerHyphenedName(){
-		team1.setManagerName("Jean-Yves Chay");
-		assertThat(team1.getManagerName(), is(equalTo("Jean-Yves Chay")));
+	public void testSetManagerFName(){
+		team1.setManagerFName("Antonio");
+		assertThat(team1.getManagerFName(), is(equalTo("Antonio")));
 	}
 	
 	@Test
-	public void testSetManagerApostropheName(){
-		team1.setManagerName("Michel Preud'homme");
-		assertThat(team1.getManagerName(), is(equalTo("Michel Preud'homme")));
+	public void testSetManagerHyphenedFirstName(){
+		team1.setManagerFName("Jimmy-Floyd");
+		assertThat(team1.getManagerFName(), is(equalTo("Jimmy-Floyd")));
 	}
 	
+	
 	@Test
-	public void testSetForeignManagerName(){
-		team1.setManagerName("José Mourinho");
-		assertThat(team1.getManagerName(), is(equalTo("José Mourinho")));
+	public void testSetForeignManagerFirstName(){
+		team1.setManagerFName("José");
+		assertThat(team1.getManagerFName(), is(equalTo("José")));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetInvalidManagerName(){
-		team1.setManagerName("Jimmy-Floyd Hass;eback");
-		assertThat(team1.getManagerName(), is(equalTo("Jimmy-Floyd Hass;eback")));
+	public void testSetInvalidManagerFirstName(){
+		team1.setManagerFName("Jimmy'Floyd");
+		assertThat(team1.getManagerFName(), is(equalTo("Jimmy'Floyd")));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetInvalidManagerName2(){
-		team1.setManagerName("M4rtin O'Neill");
-		assertThat(team1.getManagerName(), is(equalTo("M4rtin O'Neill")));
-	}*/
+	public void testSetInvalidManagerFirstName2(){
+		team1.setManagerFName("M4rtin");
+		assertThat(team1.getManagerFName(), is(equalTo("M4rtin")));
+	}
+	
+	@Test
+	public void testSetManagerApostropheLastName(){
+		team1.setManagerLName("Preud'homme");
+		assertThat(team1.getManagerLName(), is(equalTo("Preud'homme")));
+	}
 }

@@ -33,9 +33,9 @@ public class Player{
 		return teamName.matches("[a-zA-Z0-9]+([ .][a-zA-Z0-9]+)*");
 	}*/
 	
-	/*public static boolean validatePosition(String position){
-		return position.matches("\bGoalkeeper\b || \bDefender\b || \bMidfielder\b || \bForward\b");
-	}*/
+	public static boolean validatePosition(Position position){
+		return (position.equals(Position.GOALKEEPER) || position.equals(Position.DEFENDER ) || position.equals(Position.MIDFIELDER) || position.equals(Position.FORWARD));
+	}
 	
 	protected void setFirstName(String fname) {
 		if(validateFirstName(fname) == true){
@@ -69,13 +69,13 @@ public class Player{
 		}
 	}
 	
-	/*protected void setPosition(String setPositionTo) {
+	protected void setPosition(Position setPositionTo) {
 		if(validatePosition(position) == true){
 			position = setPositionTo;
 		}
 		else
 			throw new IllegalArgumentException("Position must either be Goalkeeper, Defender, Midfielder or Forward");
-	}*/
+	}
 	
 	protected void setValue(int value){
 		if(value < 0 || value > 200000000){
