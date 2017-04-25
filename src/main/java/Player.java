@@ -23,15 +23,12 @@ public class Player{
 
 	
 	public static boolean validateFirstName(String fname){
-		return fname.matches("[a-zA-Z]+([ -][a-zA-Z]+)*");
+		return fname.matches("[a-zA-ZÁÉÍÓÚáéíóú]+([ '-][a-zA-Záéíóú]+)*");
 	}
 	
 	public static boolean validateLastName(String lname){
-		return lname.matches("[a-zA-Z]+([ '-][a-zA-Z]+)*");
+		return lname.matches("[a-zA-ZÁÉÍÓÚáéíóú]+([ '-][a-zA-Z]+)*");
 	}
-	/*public static boolean validateTeamName(String teamName){
-		return teamName.matches("[a-zA-Z0-9]+([ .][a-zA-Z0-9]+)*");
-	}*/
 	
 	public static boolean validatePosition(Position position){
 		return (position.equals(Position.GOALKEEPER) || position.equals(Position.DEFENDER ) || position.equals(Position.MIDFIELDER) || position.equals(Position.FORWARD));
@@ -42,7 +39,7 @@ public class Player{
 			this.fname = fname;
 		}
 		else
-			throw new IllegalArgumentException("First name can only contain letters or hyphen");
+			throw new IllegalArgumentException("First name can only contain letters, hyphens or apostrophes.");
 	}
 	
 	protected void setLastName(String lname){
@@ -61,8 +58,8 @@ public class Player{
 	}
 	
 	protected void setJerseyNumber(int jerseyNumber) {
-		if(jerseyNumber < 0){
-			throw new IllegalArgumentException("Number must be a positive number.");
+		if(jerseyNumber < 0 || jerseyNumber >= 1000){
+			throw new IllegalArgumentException("Number must be a positive number but less than 1000.");
 		}
 		else{
 			this.jerseyNumber = jerseyNumber;
@@ -85,14 +82,6 @@ public class Player{
 			this.value = value;
 	}
 	
-	/*protected void setTeamName(String teamName) {
-		if(validateTeamName(teamName) == true){
-			this.teamName = teamName;
-		}
-		else
-			throw new IllegalArgumentException("Team Name can contain only numbers, letters or full stop");
-	}*/
-	
 	protected int getJerseyNumber() {
 		return jerseyNumber;
 	}
@@ -108,17 +97,10 @@ public class Player{
 	protected int getValue(){
 		return value;
 	}
-	/*protected String getTeamName() {
-		return teamName;
-	}*/
 
 	protected int getAge() {
 		return age;
 	}
-
-	/*protected String getPosition() {
-		return position;
-	}*/
 
 	public String toString() {
 		return "\t\tFirst Name: " + fname + "\t\tSurname: " + lname + ".\t\tAge: " + age + "Jersey Number: " + jerseyNumber + ".\t\tPosition: "

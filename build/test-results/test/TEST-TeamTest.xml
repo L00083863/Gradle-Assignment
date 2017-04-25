@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TeamTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-04-14T18:49:35" hostname="DESKTOP-0LR9QDO" time="0.014">
+<testsuite name="TeamTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2017-04-24T20:35:10" hostname="DESKTOP-0LR9QDO" time="0.062">
   <properties/>
-  <testcase name="testSetNumberedTeamName" classname="TeamTest" time="0.008"/>
-  <testcase name="testFullStopInTeamName" classname="TeamTest" time="0.003"/>
-  <testcase name="testSetInvalidTeamName2" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetInvalidManagerFirstName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetNumberedTeamName" classname="TeamTest" time="0.016"/>
+  <testcase name="testFullStopInTeamName" classname="TeamTest" time="0.022"/>
+  <testcase name="testSetInvalidManagerFirstName2" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetInvalidTeamName2" classname="TeamTest" time="0.001"/>
   <testcase name="testSetInvalidTeamName3" classname="TeamTest" time="0.001"/>
   <testcase name="testGetTeamManagerLastName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetManagerFName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetForeignManagerFirstName" classname="TeamTest" time="0.0"/>
   <testcase name="testSetTeamName" classname="TeamTest" time="0.0"/>
   <testcase name="testGetTeamName" classname="TeamTest" time="0.0"/>
-  <testcase name="testSetInvalidTeamName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetInvalidTeamName" classname="TeamTest" time="0.0"/>
   <testcase name="testGetTeamManagerFirstName" classname="TeamTest" time="0.0"/>
-  <testcase name="testGetTeamStadiumName" classname="TeamTest" time="0.001"/>
+  <testcase name="testGetTeamStadiumName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetManagerHyphenedFirstName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetManagerApostropheLastName" classname="TeamTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

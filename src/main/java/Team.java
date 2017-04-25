@@ -56,7 +56,7 @@ public class Team {
 	}
 
 	protected void setManagerLName(String managerLName){
-		if(validateManagerFName(managerLName) == true){
+		if(validateManagerLName(managerLName) == true){
 			this.managerLName = managerLName;
 		}
 		else

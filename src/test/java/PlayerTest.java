@@ -15,7 +15,27 @@ public class PlayerTest{
 	public void testSetHyphenedFirstName(){
 		testP.setFirstName("Pierre-Emerick");
 	}
+	
+	@Test
+	public void testSetApostropheFirstName(){
+		testP.setFirstName("N'Golo");
+	}
+	
+	@Test
+	public void testSetForeignFirstName(){
+		testP.setFirstName("Péle");
+	}
 		
+	@Test
+	public void testSetCapitalForeignFirstName(){
+		testP.setFirstName("Éric");
+	}
+	
+	@Test
+	public void testSetHyphenedForeignFirstName(){
+		testP.setFirstName("Georges-Kévin");
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetInvalidFirstName(){
 		testP.setFirstName("H4nry");
@@ -32,6 +52,21 @@ public class PlayerTest{
 	}
 	
 	@Test
+	public void testSetSpacedSurname(){
+		testP.setLastName("Di Matteo");
+	}
+	
+	@Test
+	public void testSetLowerCaseSpacedSurname(){
+		testP.setLastName("da Costa");
+	}
+	
+	@Test
+	public void testSetLowerCaseDoubleSpacedSurname(){
+		testP.setLastName("van der Vaart");
+	}
+	
+	@Test
 	public void testSetHyphenedSurname(){
 		testP.setLastName("Robson-Kanu");
 	}
@@ -41,10 +76,31 @@ public class PlayerTest{
 		testP.setLastName("O'Shea");
 	}
 	
+	@Test
+	public void testSetForiegnSurname(){
+		testP.setLastName("Sánchez");
+	}
+	
+	@Test
+	public void testSetHyphenedForeignSurname(){
+		testP.setLastName("Théophile-Catherine");
+	}
+	
+	@Test
+	public void testSetCapitalForeignSurname(){
+		testP.setLastName("Ángel");
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetInvalidSurname(){
 		testP.setLastName("O+Shea");
 	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetInvalidNumberedSurname(){
+		testP.setLastName("O'5hea");
+	}
+	
 	//Tests to set and get invalid and valid age
 	@Test
 	public void testGetAge(){
@@ -74,21 +130,20 @@ public class PlayerTest{
 		assertEquals(3, testP.getJerseyNumber());
 	}
 	
+	@Test
+	public void testSetJerseyNumber(){
+		testP.setJerseyNumber(11);
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetInvalidJerseyNumber(){
+	public void testSetJerseyNumberToHigh(){
+		testP.setJerseyNumber(1000);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetJerseyNumberToLow(){
 		testP.setJerseyNumber(-3);
 	}
-	
-	//Tests to set and get valid and invalid positions
-	/*@Test
-	public void testGetPosition(){
-		assertEquals("Defender", testP.getPlayerPosition());
-	}
-	
-	@Test(expected = IllegalArgumentException.class)
-	public void testSetIllegalPosition(){
-		testP.setPosition("Striker");
-	}*/
 	
 	@Test
 	public void testGetValue(){
