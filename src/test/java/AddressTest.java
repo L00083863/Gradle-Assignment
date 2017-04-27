@@ -14,6 +14,27 @@ public class AddressTest {
 		stadiumAddress = new Address(postcode, stadiumName, "High Road", "Tottenham", "London", "England");
 	}
 	
+	public static boolean validateStreetAddress(String streetName){
+		return streetName.matches("[a-zA-Z0-9]+([ '-][a-zA-Z0-9]+)*");
+	}
+	
+	public static boolean validateTown(String town){
+		return town.matches("[a-zA-Z]+([ '-][a-zA-Z]+)*");
+	}
+	
+	public static boolean validateCity(String city){
+		return city.matches("[a-zA-Z]+([ '-][a-zA-Z]+)*");
+	}
+	
+	public static boolean validateCountry(String country){
+		return country.matches("[a-zA-Z]+([ '-][a-zA-Z]+)*");
+	}
+	
+	@Test
+	public void testGetStadiumName(){
+		assertThat(stadiumAddress.getStadiumName()).isEqualTo(stadiumName);
+	}
+	
 	@Test
 	public void testGetStreet(){
 		assertThat(stadiumAddress.getStreetName()).isEqualTo("High Road");
@@ -32,6 +53,11 @@ public class AddressTest {
 	@Test
 	public void testGetCountry(){
 		assertThat(stadiumAddress.getCountry()).contains("land");
+	}
+	
+	@Test
+	public void testSetStadiumName(){
+		Team stadiumAddress = new Team("Parkhead");
 	}
 	
 	@Test

@@ -4,8 +4,8 @@ public class Team {
 	protected String managerFName;
 	protected String managerLName;
 	
-	protected Team(){
-		teamName = stadiumName = managerFName = managerLName = "";
+	protected Team(String stadiumName){
+		this.stadiumName = stadiumName;
 	}
 	
 	protected Team(String teamName, String stadiumName, String managerFName, String managerLName){
