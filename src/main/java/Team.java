@@ -1,6 +1,6 @@
 public class Team {
 	protected String teamName;
-	protected String stadiumName;
+	protected static String stadiumName;
 	protected String managerFName;
 	protected String managerLName;
 	
@@ -10,7 +10,7 @@ public class Team {
 	
 	protected Team(String teamName, String stadiumName, String managerFName, String managerLName){
 		this.teamName = teamName;
-		this.stadiumName = stadiumName;
+		Team.stadiumName = stadiumName;
 		this.managerFName = managerFName;
 		this.managerLName = managerLName;
 	}
@@ -41,7 +41,7 @@ public class Team {
 	
 	protected void setStadiumName(String stadiumName){
 		if(validateStadiumName(stadiumName) == true){
-			this.stadiumName = stadiumName;
+			Team.stadiumName = stadiumName;
 		}
 		else
 			throw new IllegalArgumentException("Staidum Name can contain letters, numbers, full stop, hypen or an apostrophe");
