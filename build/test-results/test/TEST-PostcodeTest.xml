@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PostcodeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-04-27T22:31:45" hostname="DESKTOP-0LR9QDO" time="0.09">
+  <properties/>
+  <testcase name="testPostcodeTooShort" classname="PostcodeTest" time="0.076"/>
+  <testcase name="testPostcodeTooLong" classname="PostcodeTest" time="0.006"/>
+  <testcase name="testValidPostcode" classname="PostcodeTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

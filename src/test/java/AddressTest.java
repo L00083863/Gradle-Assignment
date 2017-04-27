@@ -21,12 +21,12 @@ public class AddressTest {
 	
 	@Test
 	public void testGetTown(){
-		assertThat(stadiumAddress.getTown()).startsWith("Lon");
+		assertThat(stadiumAddress.getTown()).startsWith("Tott");
 	}
 	
 	@Test
 	public void testGetCity(){
-		assertThat(stadiumAddress.getCity()).endsWith("Ham");
+		assertThat(stadiumAddress.getCity()).endsWith("don");
 	}
 	
 	@Test

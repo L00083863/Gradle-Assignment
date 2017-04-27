@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PlayerTest" tests="35" skipped="0" failures="0" errors="0" timestamp="2017-04-27T14:04:42" hostname="DESKTOP-0LR9QDO" time="0.032">
+<testsuite name="PlayerTest" tests="36" skipped="0" failures="0" errors="0" timestamp="2017-04-27T22:31:45" hostname="DESKTOP-0LR9QDO" time="0.235">
   <properties/>
-  <testcase name="testSetForwardPosition" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetApostropheSurname" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetForwardPosition" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetApostropheSurname" classname="PlayerTest" time="0.001"/>
   <testcase name="testSetDefenderPosition" classname="PlayerTest" time="0.0"/>
   <testcase name="testGetValue" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetLowerCaseSpacedSurname" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetLowerCaseSpacedSurname" classname="PlayerTest" time="0.001"/>
   <testcase name="testGetSurname" classname="PlayerTest" time="0.0"/>
   <testcase name="testSetAgeToOld" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetInvalidSurname" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetForiegnSurname" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetInvalidFirstName" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetCapitalForeignSurname" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetValueToHigh" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetInvalidSurname" classname="PlayerTest" time="0.012"/>
+  <testcase name="testSetForiegnSurname" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetInvalidFirstName" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetCapitalForeignSurname" classname="PlayerTest" time="0.008"/>
+  <testcase name="testSetValueToHigh" classname="PlayerTest" time="0.002"/>
   <testcase name="testSetJerseyNumberToHigh" classname="PlayerTest" time="0.0"/>
   <testcase name="testSetAgeToYoung" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetForeignFirstName" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetValidAge" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetHyphenedForeignSurname" classname="PlayerTest" time="0.016"/>
-  <testcase name="testSetJerseyNumberToLow" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetValueToLow" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetMidfielderPosition" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetCapitalForeignFirstName" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetHyphenedSurname" classname="PlayerTest" time="0.0"/>
-  <testcase name="testGetJerseyNumber" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetForeignFirstName" classname="PlayerTest" time="0.002"/>
+  <testcase name="testSetValidAge" classname="PlayerTest" time="0.002"/>
+  <testcase name="testGetPostion" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetHyphenedForeignSurname" classname="PlayerTest" time="0.013"/>
+  <testcase name="testSetJerseyNumberToLow" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetValueToLow" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetMidfielderPosition" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetCapitalForeignFirstName" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetHyphenedSurname" classname="PlayerTest" time="0.002"/>
+  <testcase name="testGetJerseyNumber" classname="PlayerTest" time="0.001"/>
   <testcase name="testSetInvalidFirstName2" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetHyphenedForeignFirstName" classname="PlayerTest" time="0.0"/>
-  <testcase name="testGetFirstName" classname="PlayerTest" time="0.0"/>
-  <testcase name="testGetAge" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetHyphenedForeignFirstName" classname="PlayerTest" time="0.001"/>
+  <testcase name="testGetFirstName" classname="PlayerTest" time="0.001"/>
+  <testcase name="testGetAge" classname="PlayerTest" time="0.001"/>
   <testcase name="testSetApostropheFirstName" classname="PlayerTest" time="0.0"/>
   <testcase name="testSetHyphenedFirstName" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetJerseyNumber" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetGoalkeeperPosition" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetLowerCaseDoubleSpacedSurname" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetJerseyNumber" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetGoalkeeperPosition" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetLowerCaseDoubleSpacedSurname" classname="PlayerTest" time="0.001"/>
   <testcase name="testSetInvalidNumberedSurname" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetValue" classname="PlayerTest" time="0.0"/>
-  <testcase name="testSetSpacedSurname" classname="PlayerTest" time="0.0"/>
+  <testcase name="testSetValue" classname="PlayerTest" time="0.001"/>
+  <testcase name="testSetSpacedSurname" classname="PlayerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

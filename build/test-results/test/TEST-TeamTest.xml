@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TeamTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2017-04-27T14:04:42" hostname="DESKTOP-0LR9QDO" time="0.297">
+<testsuite name="TeamTest" tests="30" skipped="0" failures="0" errors="0" timestamp="2017-04-27T22:31:45" hostname="DESKTOP-0LR9QDO" time="0.124">
   <properties/>
   <testcase name="testSetInvalidManagerFirstName" classname="TeamTest" time="0.0"/>
-  <testcase name="testSetNumberedTeamName" classname="TeamTest" time="0.016"/>
-  <testcase name="testFullStopInTeamName" classname="TeamTest" time="0.125"/>
-  <testcase name="testSetInvalidManagerFirstName2" classname="TeamTest" time="0.0"/>
-  <testcase name="testSetInvalidTeamName2" classname="TeamTest" time="0.0"/>
-  <testcase name="testSetInvalidTeamName3" classname="TeamTest" time="0.016"/>
-  <testcase name="testGetTeamManagerLastName" classname="TeamTest" time="0.0"/>
-  <testcase name="testSetManagerFName" classname="TeamTest" time="0.016"/>
-  <testcase name="testSetForeignManagerFirstName" classname="TeamTest" time="0.0"/>
-  <testcase name="testSetTeamName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetNumberedTeamName" classname="TeamTest" time="0.043"/>
+  <testcase name="testFullStopInTeamName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetThreeSpacesInStadiumName" classname="TeamTest" time="0.002"/>
+  <testcase name="testSetInvalidManagerFirstName2" classname="TeamTest" time="0.002"/>
+  <testcase name="testSetInvalidTeamName2" classname="TeamTest" time="0.002"/>
+  <testcase name="testSetInvalidTeamName3" classname="TeamTest" time="0.001"/>
+  <testcase name="testGetTeamManagerLastName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetSpacedManagerLastName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetForeignManagerLastName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetManagerFName" classname="TeamTest" time="0.002"/>
+  <testcase name="testSetForeignManagerFirstName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetHyphenedStadiumName" classname="TeamTest" time="0.003"/>
+  <testcase name="testSetSymbolManagerLastName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetTeamName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetManagerLastName" classname="TeamTest" time="0.004"/>
   <testcase name="testGetTeamName" classname="TeamTest" time="0.0"/>
-  <testcase name="testSetInvalidTeamName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetStadiumName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetManagerHyphenedLastName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetInvalidTeamName" classname="TeamTest" time="0.002"/>
   <testcase name="testGetTeamManagerFirstName" classname="TeamTest" time="0.0"/>
-  <testcase name="testGetTeamStadiumName" classname="TeamTest" time="0.016"/>
-  <testcase name="testSetManagerHyphenedFirstName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetSpacesAndHyphen" classname="TeamTest" time="0.001"/>
+  <testcase name="testGetTeamStadiumName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetSymbolStadiumName" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetApostropheStadiumName" classname="TeamTest" time="0.008"/>
+  <testcase name="testSetSpacesHyphenAndForeignLetters" classname="TeamTest" time="0.001"/>
+  <testcase name="testSetDoubleBaralledStadiumName" classname="TeamTest" time="0.007"/>
+  <testcase name="testSetManagerHyphenedFirstName" classname="TeamTest" time="0.001"/>
   <testcase name="testSetManagerApostropheLastName" classname="TeamTest" time="0.0"/>
+  <testcase name="testSetTeamNameWithNumber" classname="TeamTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
