@@ -123,8 +123,23 @@ public class PlayerTest{
 	}
 	
 	@Test
-	public void testSetPosition(){
+	public void testSetGoalkeeperPosition(){
+		testP.setPosition(Position.GOALKEEPER);
+	}
+	
+	@Test
+	public void testSetDefenderPosition(){
+		testP.setPosition(Position.DEFENDER);
+	}
+	
+	@Test
+	public void testSetMidfielderPosition(){
 		testP.setPosition(Position.MIDFIELDER);
+	}
+	
+	@Test
+	public void testSetForwardPosition(){
+		testP.setPosition(Position.FORWARD);
 	}
 	//Tests to get/set jersey number
 	
