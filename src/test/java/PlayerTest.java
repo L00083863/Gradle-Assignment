@@ -122,7 +122,10 @@ public class PlayerTest{
 		testP.setAge(51);
 	}
 	
-	
+	@Test
+	public void testSetPosition(){
+		testP.setPosition(Position.MIDFIELDER);
+	}
 	//Tests to get/set jersey number
 	
 	@Test
