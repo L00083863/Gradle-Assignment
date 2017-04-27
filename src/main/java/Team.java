@@ -77,9 +77,4 @@ public class Team {
 	protected String getManagerLName(){
 		return managerLName;
 	}
-	
-	public String toString(){
-		return "Team Name: " + teamName + "\t\tStadium Name: " + stadiumName + 
-				"\t\tManager First Name: " +managerFName+ "\t\tManager Surname: "+managerLName;
-	}
 }

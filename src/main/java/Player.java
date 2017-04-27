@@ -105,9 +105,4 @@ public class Player{
 	protected int getAge() {
 		return age;
 	}
-
-	public String toString() {
-		return "\t\tFirst Name: " + fname + "\t\tSurname: " + lname + ".\t\tAge: " + age + "Jersey Number: " + jerseyNumber + ".\t\tPosition: "
-				+ position + "\t\tValue: " + value + ".";
-	}
 }

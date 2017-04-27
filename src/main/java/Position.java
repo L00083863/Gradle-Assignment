@@ -13,9 +13,5 @@ public enum Position{
 	protected String getPosition(){
 		return position;
 	}
-	
-	@Override
-	public String toString(){
-		return position;
-	}
+
 }
