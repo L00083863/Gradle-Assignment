@@ -37,4 +37,9 @@ public class AddressTest {
 	public void testGetCountry(){
 		assertThat(stadiumAddress.getCountry().contains("land"));
 	}
+	
+	@Test
+	public void testSetStreetAddress(){
+		stadiumAddress.setTown("");
+	}
 }

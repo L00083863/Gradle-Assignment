@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.allOf;
@@ -13,7 +14,13 @@ import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.is;
 
 public class TeamTest {
+	
 	Team team1 = new Team("Tottenham Hotspur", "White Hart Lane", "Mauricio",  "Pochettino");
+	
+	@Before
+	public void setUp(){
+		Team team = new Team("Glasgow Celtic", "Parkhead", "Brenden",  "Rodgers");
+	}
 	
 	@Test
 	public void testGetTeamName() {
@@ -119,6 +126,12 @@ public class TeamTest {
 		assertThat(team1.getStadiumName(), endsWith("'Ara"));
 	}
 	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetSymbolStadiumName(){
+		team1.setStadiumName("#ld Trafford");
+		assertThat(team1.getStadiumName(), containsString("0"));
+	}
+	
 	@Test
 	public void testSetManagerFName(){
 		team1.setManagerFName("Antonio");
@@ -179,6 +192,9 @@ public class TeamTest {
 		assertThat(team1.getManagerLName(), is(equalTo("de Boer")));
 	}
 	
-	
-	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetSymbolManagerLastName(){
+		team1.setManagerLName("David Moy€s");
+		assertThat(team1.getManagerLName(), is(equalTo("David Moy€s")));
+	}
 }
