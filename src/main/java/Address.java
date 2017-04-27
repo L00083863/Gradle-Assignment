@@ -19,19 +19,40 @@ public class Address {
 		return stadiumName;
 	}
 	
+	protected void setStadiumName(Team stadiumName){
+		this.stadiumName = stadiumName;
+	}
+	
 	protected String getStreetName(){
 		return streetName;
+	}
+	
+	protected void setStreetName(String streetName){
+		this.streetName = streetName;
 	}
 	
 	protected String getTown(){
 		return town;
 	}
 	
+	protected void setTown(String town){
+		this.town = town;
+	}
+	
 	protected String getCity(){
 		return city;
+	}
+	
+	protected void setCity(String city){
+		this.city = city;
 	}
 	
 	protected String getCountry(){
 		return country;
 	}
+	
+	protected void setCountry(String country){
+		this.country = country;
 	}
+		
+}

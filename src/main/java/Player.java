@@ -62,7 +62,7 @@ public class Player{
 			position = setPositionTo;
 		}
 		else
-			throw new IllegalArgumentException("Position must either be Goalkeeper, Defender, Midfielder or Forward");
+		{}
 	}
 	
 	protected void setJerseyNumber(int jerseyNumber) {
