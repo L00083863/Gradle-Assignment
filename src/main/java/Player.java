@@ -4,7 +4,7 @@ public class Player{
 	protected int age = 0;
 	protected int jerseyNumber = 0; 
 	protected int value = 0;
-	protected Position position;
+	protected Position position	;
 
 	protected Player() {
 		fname = lname = "";
@@ -30,6 +30,10 @@ public class Player{
 		return lname.matches("[a-zA-ZÁÉÍÓÚáéíóú]+([ '-][a-zA-Z]+)*");
 	}
 	
+	public static boolean validatePosition(Position position){
+		return (position.equals(Position.GOALKEEPER) || position.equals(Position.DEFENDER ) || position.equals(Position.MIDFIELDER) || position.equals(Position.FORWARD));
+	}
+	
 	protected void setFirstName(String fname) {
 		if(validateFirstName(fname) == true){
 			this.fname = fname;
@@ -51,6 +55,14 @@ public class Player{
 			throw new IllegalArgumentException("Age must be 16 or above or 50 or below ");
 		}
 		this.age = age;
+	}
+	
+	protected void setPosition(Position setPositionTo) {
+		if(validatePosition(position) == true){
+			position = setPositionTo;
+		}
+		else
+			throw new IllegalArgumentException("Position must either be Goalkeeper, Defender, Midfielder or Forward");
 	}
 	
 	protected void setJerseyNumber(int jerseyNumber) {
@@ -80,6 +92,10 @@ public class Player{
 	
 	protected String getLastName(){
 		return lname;
+	}
+	
+	protected Position getPosition(){
+		return position;
 	}
 
 	protected int getValue(){

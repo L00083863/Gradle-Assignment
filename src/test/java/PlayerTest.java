@@ -2,7 +2,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class PlayerTest{
+public class PlayerTest extends Player{
+	
 	Player testP = new Player("Danny", "Rose", 26, 3, Position.DEFENDER, 20000000);
 	
 	//Test to set and get illegal and legal names
@@ -101,6 +102,30 @@ public class PlayerTest{
 		testP.setLastName("O'5hea");
 	}
 	
+	@Test
+	public void testGetPostion(){
+		assertEquals(Position.DEFENDER, testP.getPosition());
+	}
+	
+	@Test
+	public void testSetGoalkeeperPosition(){
+		testP.setPosition(Position.GOALKEEPER);
+	}
+	
+	@Test
+	public void testSetDefenderPosition(){
+		testP.setPosition(Position.DEFENDER);
+	}
+	
+	@Test
+	public void testSetMidfielderPosition(){
+		testP.setPosition(Position.MIDFIELDER);
+	}
+	
+	@Test
+	public void testSetForwardPosition(){
+		testP.setPosition(Position.FORWARD);
+	}
 	//Tests to set and get invalid and valid age
 	@Test
 	public void testGetAge(){
