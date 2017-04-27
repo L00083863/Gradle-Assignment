@@ -9,8 +9,8 @@ public class PostcodeTest {
 
 	@Test
 	public void testValidPostcode(){
-		assertThat(validCode.getPostcode().startsWith("SW1A"));
-		assertThat(validCode.getPostcode().endsWith("OPW"));
+		assertThat(validCode.getPostcode()).startsWith("SW1A");
+		assertThat(validCode.getPostcode()).endsWith("OPW");
 	}
 	
 	@Rule

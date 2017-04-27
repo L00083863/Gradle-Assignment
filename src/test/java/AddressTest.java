@@ -1,4 +1,4 @@
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,17 +21,17 @@ public class AddressTest {
 	
 	@Test
 	public void testGetTown(){
-		assertThat(stadiumAddress.getTown().startsWith("Lon"));
+		assertThat(stadiumAddress.getTown()).startsWith("Lon");
 	}
 	
 	@Test
 	public void testGetCity(){
-		assertThat(stadiumAddress.getCity().endsWith("Ham"));
+		assertThat(stadiumAddress.getCity()).endsWith("Ham");
 	}
 	
 	@Test
 	public void testGetCountry(){
-		assertThat(stadiumAddress.getCountry().contains("land"));
+		assertThat(stadiumAddress.getCountry()).contains("land");
 	}
 	
 	@Test
