@@ -1,6 +1,6 @@
 public class Team {
 	protected String teamName;
-	protected static String stadiumName;
+	protected String stadiumName;
 	protected String managerFName;
 	protected String managerLName;
 	
@@ -10,7 +10,7 @@ public class Team {
 	
 	protected Team(String teamName, String stadiumName, String managerFName, String managerLName){
 		this.teamName = teamName;
-		Team.stadiumName = stadiumName;
+		this.stadiumName = stadiumName;
 		this.managerFName = managerFName;
 		this.managerLName = managerLName;
 	}
@@ -20,15 +20,15 @@ public class Team {
 	}
 	
 	public static boolean validateStadiumName(String stadiumName){
-		return stadiumName.matches("[a-zA-Z0-9]+([ .-'][a-zA-Z0-9]+)*");
+		return stadiumName.matches("[a-zA-Z0-9]+([ '-.][a-zA-Z0-9áéíóú]+)+([ '-.][ ][a-zA-Z0-9áéíóú]+)*");
 	}
 	
 	public static boolean validateManagerFName(String managerFName){
-		return managerFName.matches("[a-zA-Záéíóú]+([ -][a-zA-Z]+)*");
+		return managerFName.matches("[a-zA-Záéíóú]+([ -][a-zA-Záéíóú]+)*");
 	}
 	
 	public static boolean validateManagerLName(String managerLName){
-		return managerLName.matches("[a-zA-Záéíóú]+([ '-][a-zA-Z]+)*");
+		return managerLName.matches("[a-zA-ZÁÉÍÓÚáéíóú]+([ '-][a-zA-Záéíóú]+)*");
 	}
 	
 	protected void setTeamName(String teamName){
@@ -41,10 +41,10 @@ public class Team {
 	
 	protected void setStadiumName(String stadiumName){
 		if(validateStadiumName(stadiumName) == true){
-			Team.stadiumName = stadiumName;
+			this.stadiumName = stadiumName;
 		}
 		else
-			throw new IllegalArgumentException("Staidum Name can contain letters, numbers, full stop, hypen or an apostrophe");
+			throw new IllegalArgumentException("Stadium Name can contain letters, numbers, full stop, hypen or an apostrophe");
 	}
 	
 	protected void setManagerFName(String managerFName){
