@@ -36,6 +36,21 @@ public class AddressTest {
 	
 	@Test
 	public void testSetStreetAddress(){
-		stadiumAddress.setTown("");
+		stadiumAddress.setStreetName("Tollcross Rd");
+	}
+	
+	@Test
+	public void testSetTown(){
+		stadiumAddress.setTown("Gallowgate");
+	}
+	
+	@Test
+	public void testSetCity(){
+		stadiumAddress.setCity("Glasgow");
+	}
+	
+	@Test
+	public void testSetCountry(){
+		stadiumAddress.setCountry("Scotland");
 	}
 }

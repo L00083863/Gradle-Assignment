@@ -30,10 +30,6 @@ public class Player{
 		return lname.matches("[a-zA-ZÁÉÍÓÚáéíóú]+([ '-][a-zA-Z]+)*");
 	}
 	
-	public static boolean validatePosition(Position position){
-		return (position.equals(Position.GOALKEEPER) || position.equals(Position.DEFENDER ) || position.equals(Position.MIDFIELDER) || position.equals(Position.FORWARD));
-	}
-	
 	protected void setFirstName(String fname) {
 		if(validateFirstName(fname) == true){
 			this.fname = fname;
@@ -57,12 +53,8 @@ public class Player{
 		this.age = age;
 	}
 	
-	protected void setPosition(Position setPositionTo) {
-		if(validatePosition(position) == true){
-			position = setPositionTo;
-		}
-		else
-		{}
+	protected void setPosition(Position position){
+		this.position = position;
 	}
 	
 	protected void setJerseyNumber(int jerseyNumber) {

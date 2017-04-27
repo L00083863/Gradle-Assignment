@@ -5,7 +5,7 @@ public class Team {
 	protected String managerLName;
 	
 	protected Team(){
-		teamName = stadiumName = managerFName = managerLName;
+		teamName = stadiumName = managerFName = managerLName = "";
 	}
 	
 	protected Team(String teamName, String stadiumName, String managerFName, String managerLName){

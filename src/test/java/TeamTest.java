@@ -15,11 +15,13 @@ import static org.hamcrest.Matchers.is;
 
 public class TeamTest {
 	
+	private Team team;
+	
 	Team team1 = new Team("Tottenham Hotspur", "White Hart Lane", "Mauricio",  "Pochettino");
 	
 	@Before
 	public void setUp(){
-		Team team = new Team("Glasgow Celtic", "Parkhead", "Brenden",  "Rodgers");
+		team = new Team("Glasgow Celtic", "Parkhead", "Brenden",  "Rodgers");
 	}
 	
 	@Test
