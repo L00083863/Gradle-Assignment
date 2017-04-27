@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Player.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Gradle-Assignment</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Player.java</span></div><h1>Player.java</h1><pre class="source lang-java linenums">public class Player{
+<span class="pc" id="L2">	protected String fname = &quot;&quot;;</span>
+<span class="pc" id="L3">	protected String lname = &quot;&quot;;</span>
+<span class="pc" id="L4">	protected int age = 0;</span>
+<span class="pc" id="L5">	protected int jerseyNumber = 0; </span>
+<span class="pc" id="L6">	protected int value = 0;</span>
+	protected Position position;
+
+<span class="nc" id="L9">	protected Player() {</span>
+<span class="nc" id="L10">		fname = lname = &quot;&quot;;</span>
+<span class="nc" id="L11">		age = jerseyNumber = value = 0;</span>
+<span class="nc" id="L12">	}</span>
+
+	protected Player(String fname, String lname, int age, int jerseyNumber, Position position, int value) {
+<span class="fc" id="L15">		super();</span>
+<span class="fc" id="L16">		this.fname = fname;</span>
+<span class="fc" id="L17">		this.lname = lname;</span>
+<span class="fc" id="L18">		this.position = position;</span>
+<span class="fc" id="L19">		this.age = age;</span>
+<span class="fc" id="L20">		this.jerseyNumber = jerseyNumber;</span>
+<span class="fc" id="L21">		this.value = value;</span>
+<span class="fc" id="L22">	}</span>
+
+	
+	public static boolean validateFirstName(String fname){
+<span class="fc" id="L26">		return fname.matches(&quot;[a-zA-ZÃ�Ã‰Ã�Ã“ÃšÃ¡Ã©Ã­Ã³Ãº]+([ '-][a-zA-ZÃ¡Ã©Ã­Ã³Ãº]+)*&quot;);</span>
+	}
+	
+	public static boolean validateLastName(String lname){
+<span class="fc" id="L30">		return lname.matches(&quot;[a-zA-ZÃ�Ã‰Ã�Ã“ÃšÃ¡Ã©Ã­Ã³Ãº]+([ '-][a-zA-Z]+)*&quot;);</span>
+	}
+	
+	public static boolean validatePosition(Position position){
+<span class="pc bpc" id="L34" title="6 of 8 branches missed.">		return (position.equals(Position.GOALKEEPER) || position.equals(Position.DEFENDER ) || position.equals(Position.MIDFIELDER) || position.equals(Position.FORWARD));</span>
+	}
+	
+	protected void setFirstName(String fname) {
+<span class="fc bfc" id="L38" title="All 2 branches covered.">		if(validateFirstName(fname) == true){</span>
+<span class="fc" id="L39">			this.fname = fname;</span>
+		}
+		else
+<span class="fc" id="L42">			throw new IllegalArgumentException(&quot;First name can only contain letters, hyphens or apostrophes.&quot;);</span>
+<span class="fc" id="L43">	}</span>
+	
+	protected void setLastName(String lname){
+<span class="fc bfc" id="L46" title="All 2 branches covered.">		if(validateLastName(lname) == true){</span>
+<span class="fc" id="L47">			this.lname = lname;</span>
+		}
+		else
+<span class="fc" id="L50">			throw new IllegalArgumentException(&quot;Last name can contain letters, hyphen or apostrophe&quot;);</span>
+<span class="fc" id="L51">	}</span>
+	
+	protected void setAge(int age) {
+<span class="fc bfc" id="L54" title="All 4 branches covered.">		if(age &lt; 16 || age &gt; 50){</span>
+<span class="fc" id="L55">			throw new IllegalArgumentException(&quot;Age must be 16 or above or 50 or below &quot;);</span>
+		}
+<span class="fc" id="L57">		this.age = age;</span>
+<span class="fc" id="L58">	}</span>
+	
+	protected void setJerseyNumber(int jerseyNumber) {
+<span class="fc bfc" id="L61" title="All 4 branches covered.">		if(jerseyNumber &lt; 0 || jerseyNumber &gt;= 1000){</span>
+<span class="fc" id="L62">			throw new IllegalArgumentException(&quot;Number must be a positive number but less than 1000.&quot;);</span>
+		}
+		else{
+<span class="fc" id="L65">			this.jerseyNumber = jerseyNumber;</span>
+		}
+<span class="fc" id="L67">	}</span>
+	
+	protected void setPosition(Position setPositionTo) {
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if(validatePosition(position) == true){</span>
+<span class="fc" id="L71">			position = setPositionTo;</span>
+		}
+		else
+<span class="nc" id="L74">			throw new IllegalArgumentException(&quot;Position must either be Goalkeeper, Defender, Midfielder or Forward&quot;);</span>
+<span class="fc" id="L75">	}</span>
+	
+	protected void setValue(int value){
+<span class="fc bfc" id="L78" title="All 4 branches covered.">		if(value &lt; 0 || value &gt; 200000000){</span>
+<span class="fc" id="L79">			throw new IllegalArgumentException(&quot;Be reasonable - Nobody is worth that little or that much!!&quot;);</span>
+		}
+		else
+<span class="fc" id="L82">			this.value = value;</span>
+<span class="fc" id="L83">	}</span>
+	
+	protected int getJerseyNumber() {
+<span class="fc" id="L86">		return jerseyNumber;</span>
+	}
+
+	protected String getFirstName() {
+<span class="fc" id="L90">		return fname;</span>
+	}
+	
+	protected String getLastName(){
+<span class="fc" id="L94">		return lname;</span>
+	}
+
+	protected int getValue(){
+<span class="fc" id="L98">		return value;</span>
+	}
+
+	protected int getAge() {
+<span class="fc" id="L102">		return age;</span>
+	}
+
+	public String toString() {
+<span class="nc" id="L106">		return &quot;\t\tFirst Name: &quot; + fname + &quot;\t\tSurname: &quot; + lname + &quot;.\t\tAge: &quot; + age + &quot;Jersey Number: &quot; + jerseyNumber + &quot;.\t\tPosition: &quot;</span>
+				+ position + &quot;\t\tValue: &quot; + value + &quot;.&quot;;
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>
