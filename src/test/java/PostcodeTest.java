@@ -6,7 +6,7 @@ import org.junit.rules.ExpectedException;
 
 public class PostcodeTest {
 	private Postcode validCode = new Postcode("SW1A OPW");
-	Postcode postcode = new Postcode("");
+	Postcode postcode = new Postcode("HU5 XZWY");
 
 	@Test
 	public void testValidPostcode(){
