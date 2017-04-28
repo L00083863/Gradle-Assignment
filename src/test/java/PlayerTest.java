@@ -5,6 +5,7 @@ import org.junit.Test;
 public class PlayerTest extends Player{
 	
 	Player testP = new Player("Danny", "Rose", 26, 3, Position.DEFENDER, 20000000);
+	Position playerP = Position.MIDFIELDER;
 	
 	//Test to set and get illegal and legal names
 	@Test
@@ -105,6 +106,11 @@ public class PlayerTest extends Player{
 	@Test
 	public void testGetPostion(){
 		assertEquals(Position.DEFENDER, testP.getPosition());
+	}
+	
+	@Test
+	public void testGetPlayerPosition(){
+		playerP.getPosition();
 	}
 	
 	@Test
