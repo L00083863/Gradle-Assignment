@@ -27,16 +27,6 @@ public class Postcode {
 	}
 		
 	public void setPostcode(String postcode){
-		if(postcode.length() < 6){
-			throw new IllegalArgumentException("Postcode too short");
-		}
-		else if(postcode.length() > 8){
-			throw new IllegalArgumentException("Postcode to long");
-		}
-		else{
-			postcode.toUpperCase();
 			this.postcode = postcode;
-		}
-		
 	}
 }
